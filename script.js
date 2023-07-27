@@ -7,5 +7,13 @@ for (let i = 0; i < 256; i++) {
     container.appendChild(div.cloneNode(true));
 }
 
-const grid = document.querySelectorAll(`.grid-container > .grid`)
-console.log(grid)
+const grids = document.querySelectorAll(`.grid-container > .grid`)
+console.log(grids)
+grids.forEach(grid => grid.addEventListener("mouseover", function() {
+   hoverGrid(grid); 
+}));
+
+function hoverGrid(grid) {
+    console.log('click');
+    grid.classList.add("colored");
+}
