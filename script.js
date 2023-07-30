@@ -1,7 +1,8 @@
 const div = document.createElement("div");
 const container = document.querySelector('.grid-container');
+let color = document.getElementById('main-color');
 let currentSize = 16;
-let currentColor = 'grey'
+let currentColor = color.value
 let eraser = false
 
 function setCanvasSize(currentSize) {
@@ -11,14 +12,17 @@ function setCanvasSize(currentSize) {
     }
     
     const grids = document.querySelectorAll(`.grid-container > .grid`)
-    grids.forEach(grid => grid.addEventListener("mouseenter", function() {
+    grids.forEach(grid => grid.addEventListener("mouseover", function() {
         hoverGrid(grid); 
     }));
 }
 
 function hoverGrid(grid) {
+   
     if (clickStatus == true) {
-        grid.style.backgroundColor = currentColor;
+        grid.style.backgroundColor = `${currentColor}`;
+    } else {
+        grid.onmousedown = function() {grid.style.backgroundColor = `${currentColor}`}
     }
     //grid.classList.add("colored");
 }
@@ -30,7 +34,6 @@ function deleteAllGrid() {
 }
 
 function newCanvasSize() {
-    console.log('canvasSize')
     let newSize = prompt("Canvas Size?");
     while (newSize > 100) {
         newSize = prompt("Canvas Size?");
@@ -50,18 +53,19 @@ function setGridSize(currentSize) {
 function toogleEraser(){
     if (eraser == false) {
         eraser = true;
-        currentColor = 'white'
     } else {
         eraser = false;
-        currentColor = 'grey'
     }
-    
-    console.log(eraser)
 }
 
+//console.log(color.value)
 let clickStatus = false;
-window.addEventListener('mousedown', function() {clickStatus = true; console.log(clickStatus)});
-window.addEventListener('mouseup', function() {clickStatus = false; console.log(clickStatus)});
+container.addEventListener('mousedown', function() {clickStatus = true; console.log(clickStatus)});
+document.addEventListener('mouseup', function() {clickStatus = false; console.log(clickStatus)});
+color.addEventListener('change', (event) => {
+    currentColor = color.value;
+    console.log(currentColor);
+})
 div.classList.add("grid");
 setGridSize(currentSize);
 setCanvasSize(currentSize);
