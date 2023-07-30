@@ -18,7 +18,6 @@ function setCanvasSize(currentSize) {
 }
 
 function hoverGrid(grid) {
-   
     if (clickStatus == true) {
         grid.style.backgroundColor = `${currentColor}`;
     } else {
@@ -53,8 +52,10 @@ function setGridSize(currentSize) {
 function toogleEraser(){
     if (eraser == false) {
         eraser = true;
+        currentColor = '';
     } else {
         eraser = false;
+        currentColor = color.value;
     }
 }
 
