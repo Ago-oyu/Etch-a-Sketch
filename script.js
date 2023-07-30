@@ -23,7 +23,6 @@ function hoverGrid(grid) {
     } else {
         grid.onmousedown = function() {grid.style.backgroundColor = `${currentColor}`}
     }
-    //grid.classList.add("colored");
 }
 
 function deleteAllGrid() {
