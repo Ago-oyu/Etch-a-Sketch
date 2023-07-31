@@ -43,9 +43,9 @@ function newCanvasSize() {
 
 function setGridSize(currentSize) {
     let gridSize = container.offsetWidth/currentSize;
+    console.log(gridSize)
     div.style.height = `${gridSize}px`;
     div.style.width = `${gridSize}px`;
-    console.log(div.style.height)
 }
 
 function toogleEraser(){

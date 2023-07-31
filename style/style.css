@@ -36,11 +36,37 @@ body header {
 body main {
   padding: 0 2rem;
 }
+body main .setting-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+body main .setting-container .color-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+body main .setting-container .color-container label {
+  line-height: 40px;
+  text-align: center;
+}
+body main .setting-container .color-container #main-color {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+body main .setting-container * {
+  width: 200px;
+  height: 40px;
+}
 body main .grid-container {
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
-  height: 800px;
+  width: 700px;
   margin: 0 auto;
 }
 body main .grid {
