@@ -42,7 +42,7 @@ function newCanvasSize() {
 }
 
 function setGridSize(currentSize) {
-    let gridSize = 800/currentSize;
+    let gridSize = container.offsetWidth/currentSize;
     div.style.height = `${gridSize}px`;
     div.style.width = `${gridSize}px`;
     console.log(div.style.height)
@@ -58,7 +58,6 @@ function toogleEraser(){
     }
 }
 
-//console.log(color.value)
 let clickStatus = false;
 container.addEventListener('mousedown', function() {clickStatus = true; console.log(clickStatus)});
 document.addEventListener('mouseup', function() {clickStatus = false; console.log(clickStatus)});

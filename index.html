@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch a Sketch</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <h1>Etch a Sketch</h1>
-    <button onclick="newCanvasSize()">Set Canvas Size</button>
-    <button onclick="toogleEraser()">Eraser</button>
-    <input type="color" name="" id="main-color">
-    <div class="grid-container">
-
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch a Sketch | Ago-oyu</title>
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Etch a Sketch</h1>
+        </header>
+        <main>
+            <div class="setting-container">
+                <button onclick="newCanvasSize()">Set Canvas Size</button>
+                <button onclick="toogleEraser()">Eraser</button>
+                <input type="color" name="" id="main-color">
+            </div>
+            <div class="grid-container"></div>
+        </main>
+    </body>
 </html>

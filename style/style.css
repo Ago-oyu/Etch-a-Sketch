@@ -28,15 +28,24 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-body .grid-container {
+body header {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 2rem;
+}
+body main {
+  padding: 0 2rem;
+}
+body main .grid-container {
   display: flex;
   flex-wrap: wrap;
   width: 800px;
   height: 800px;
+  margin: 0 auto;
 }
-body .grid-container .grid {
+body main .grid {
   border: #a8a8a8 solid 1px;
 }
-body .grid-container .colored {
+body main .colored {
   background-color: aqua;
 }/*# sourceMappingURL=style.css.map */
